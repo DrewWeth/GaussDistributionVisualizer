@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="chartkick.js"></script>
+    </head>
+    <body>
+        Hello
+        <% @ops.each do |o| %>
+          <div><a href="<%= "/?c=#{o[:count]}&g=#{o[:g_size]}" %>"><%= o.inspect %></a></div>
+        <% end %>
+        <%= @chart %>
+    </body>
+</html>
